@@ -1,0 +1,31 @@
+public class Calculator {
+public static Decimal calculate(Decimal a, Decimal b, String operation) {
+        if (operation == 'add') {
+            return a + b;
+        } else if (operation == 'subtract') {
+            return a - b;
+        } else if (operation == 'multiply') {
+            return a * b;
+        } else if (operation == 'divide') {
+            if (b == 0) {
+                System.debug('Cannot divide by zero.');
+                return null;
+            }
+            return a / b;
+        } else {
+            System.debug('Invalid operation.');
+            return null;
+        }
+    }
+
+    // Simulated main method
+    public static void main() {
+        Decimal a = 10;
+        Decimal b = 5;
+
+        System.debug('Add: ' + calculate(a, b, 'add'));
+        System.debug('Subtract: ' + calculate(a, b, 'subtract'));
+        System.debug('Multiply: ' + calculate(a, b, 'multiply'));
+        System.debug('Divide: ' + calculate(a, b, 'divide'));
+    }
+}
