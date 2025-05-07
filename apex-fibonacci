@@ -1,0 +1,26 @@
+public class FibonacciSeries {
+public static void printFibonacci(Integer n) {
+        Integer a = 0;
+        Integer b = 1;
+        Integer c;
+
+        if (n <= 0) {
+            System.debug('Please enter a positive number.');
+            return;
+        }
+
+        System.debug('Fibonacci Series up to ' + n + ' terms:');
+        for (Integer i = 1; i <= n; i++) {
+            System.debug(a);
+            c = a + b;
+            a = b;
+            b = c;
+        }
+    }
+
+    // Simulated main method
+    public static void main() {
+        Integer numTerms = 10;  // Change this to print more or fewer terms
+        printFibonacci(numTerms);
+    }
+}
